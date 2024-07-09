@@ -35,4 +35,5 @@ def create_plot(hist_dict):
     )
     def update_title(selected_value):
         return str(selected_value) + ' stock and public opinion'
+
     return app
