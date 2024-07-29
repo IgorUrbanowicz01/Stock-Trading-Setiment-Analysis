@@ -1,6 +1,5 @@
 
 import plotly.graph_objects as go
-import plotly.express as px
 from dash import Dash, dcc, html, Input, Output, callback
 def create_plot(hist_dict):
     app = Dash()
