@@ -44,7 +44,11 @@ def scrape_finviz(stock):
 
     if p.exists():
         new_df = pd.DataFrame(df_dict)
-        pd.concat([original_df, new_df])
+        df = pd.concat([new_df, original_df], ignore_index=True)
+        df.to_csv(p, index=False)
     else:
         df = pd.DataFrame.from_dict(df_dict)
         df.to_csv(p, index=False)
+
+if __name__ == '__main__':
+    scrape_finviz('AAPL')
